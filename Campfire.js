@@ -1,9 +1,9 @@
 import xapi from 'xapi';
 
 let botToken = "replaceWithBotToken"
-let codecDeviceId2 = "deviceIdCodec1"
-let codecDeviceId3 = "deviceIdCodec2"
-let codecDeviceId4 = "deviceIdCodec3"
+let codecDeviceId2 = "deviceIdCodec2"
+let codecDeviceId3 = "deviceIdCodec3"
+let codecDeviceId4 = "deviceIdCodec4"
 
 var remoteRequest = false // do not change
 
