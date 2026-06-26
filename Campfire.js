@@ -1,14 +1,13 @@
 import xapi from 'xapi';
 
 let botToken = "replaceWithBotToken"
-let codecDeviceId2 = "deviceIdCodec2"
-let codecDeviceId3 = "deviceIdCodec3"
-let codecDeviceId4 = "deviceIdCodec4"
+let codecDeviceId2 = "replaceWithDeviceIdCodec2"
+let codecDeviceId3 = "replaceWithDeviceIdCodec3"
+let codecDeviceId4 = "replaceWithDeviceIdCodec4"
 
 var remoteRequest = false // do not change
 
 function postMessage(codecDeviceId, requestType, dialNumber, displayName) {
-  console.log("request: " + requestType)
   let headerAuth = "Authorization: Bearer " + botToken
   let headerContent = "Content-Type: application/json"
   let url = "https://webexapis.com/v1/xapi/command/UserInterface.Message.Prompt.Display"
@@ -37,7 +36,6 @@ function postMessage(codecDeviceId, requestType, dialNumber, displayName) {
     }
   };
   let json = JSON.stringify(body)
-  console.log("jsonMsg: " + json)
 
   xapi.Command.HttpClient.Post({Header: [headerAuth, headerContent], Timeout: 10, Url: url}, json);
 }
@@ -45,11 +43,9 @@ function postMessage(codecDeviceId, requestType, dialNumber, displayName) {
 async function getCallStatus(){
   xapi.Status.Call.get().then(callStatus => {
       const jsonParse = JSON.parse(callStatus)
-      console.log("jsonParse: " + jsonParse)
       let number = jsonParse.CallbackNumber
       let sipAddress = number.split(":");
       let displayName = jsonParse.DisplayName
-      console.log(`Call to ${displayName} on number ${sipAddress[1]}`)
       postMessage(codecDeviceId2, "placeCall", sipAddress[1], displayName)
       postMessage(codecDeviceId3, "placeCall", sipAddress[1], displayName)
       postMessage(codecDeviceId4, "placeCall", sipAddress[1], displayName)
@@ -63,11 +59,9 @@ function placeCall(value){
   xapi.Command.Dial({ DisplayName: `Dialing ${displayName}`, Number: sipAddress });
 }
 
-
 function init(){
   xapi.Config.HttpClient.Mode.set("On");
   xapi.Status.SystemUnit.State.NumberOfActiveCalls.on(numberOfCalls => {
-    console.log("numberOfCalls: " + numberOfCalls)
     if (numberOfCalls == 1){
       getCallStatus()
     }else if (numberOfCalls == 0){
@@ -84,7 +78,6 @@ function init(){
   })
 
   xapi.Status.Audio.Microphones.Mute.on(muteStatus => {
-    console.log("muteStatus: " + muteStatus)
     postMessage(codecDeviceId2, "muteCall" + muteStatus)
     postMessage(codecDeviceId3, "muteCall" + muteStatus)
     postMessage(codecDeviceId4, "muteCall" + muteStatus)
@@ -92,13 +85,12 @@ function init(){
 
   xapi.event.on('UserInterface Message Prompt Display', (messageContent) => {
     if (messageContent.Title == "Placing Call") {
-      console.log("placeCall")
-      //remoteRequest = true
       placeCall(messageContent)
+      
     }else if (messageContent.Title == "Ending Call") {
-      console.log("endCall")
       remoteRequest = true
       xapi.Command.Call.Disconnect({});
+      
     }else if (messageContent.Title == "Toggling Mute") {
       if (messageContent.Text == "Muting Audio"){
         xapi.Command.Audio.Microphones.Mute();
