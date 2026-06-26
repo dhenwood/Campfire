@@ -1,4 +1,4 @@
-# Introduction
+### Introduction
 "Campfire" is a solution featuring an innovative design that delivers a cinematic meeting experience and meets all current requirements for hybrid meetings involving C-level executives. In Campfire meeting rooms, in-person participants sit around a central arrangement of four quad-cameras and up to eight eye-level screens. Campfire accommodates up to 16 participants, with four on each side.
 
 ![alt text](https://storage.googleapis.com/gblogs-bucket/sites/25/Campfire_close_up_4k_Still-1536x864.jpg)
@@ -15,10 +15,10 @@ The following caveats exist
 
 ### Requirements
 The following items need to be performed to setup Campfire;
-1. A BOT Token needs to be created. This is used to notify the other codecs of the task to do
+1. A BOT Token needs to be created. This is used to notify the other codecs of each of the tasks they need to do. If unfamiliar, the steps to creating a BOT [can be found here](https://developer.webex.com/messaging/docs/bots)
 2. Apply the BOT Token to all 4 of the Workspaces the Room Bar Pros are in. Ensure to set the permissions to Full Access
-3. Obtain each of the device ID's for the 4 Room Bar Pros
+3. Obtain each of the device ID's for the 4 Room Bar Pros. This can be done via Control Hub or via the browser web GUI. For details [see the documentation](https://roomos.cisco.com/xapi/Status.Webex.DeveloperId/)
 
-Once these have been done, the macro needs to be updated with the BOT Token and device ID's.
+Once these have been done, [the macro](https://github.com/dhenwood/Campfire/blob/main/Campfire.js) needs to be updated with the BOT Token and device ID's.
 
-Install the macro on each codec.
+Install the macro on each codec. **NOTE:** Ensure for each codec, you only put the Device ID of the other 3 codecs.
