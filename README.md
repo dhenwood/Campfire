@@ -3,6 +3,8 @@ In Campfire meeting rooms, in-person participants sit around a central arrangeme
 
 ![alt text](https://storage.googleapis.com/gblogs-bucket/sites/25/Campfire_close_up_4k_Still-1536x864.jpg)
 
+Cisco _had_ a solution to provide a Campfire experience however it is no longer available. The following is a simplified solution to the predecesor. **NOTE:** this is not Cisco or TAC supported.
+
 ### Capabilities & Caveats
 This macro provides the following 3 key features;
 1. Initiate a call from any of the 4 Navigators (manual or OBTP) and the other 3 codecs dial the same address.
