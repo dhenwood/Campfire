@@ -3,6 +3,16 @@
 
 ![alt text](https://storage.googleapis.com/gblogs-bucket/sites/25/Campfire_close_up_4k_Still-1536x864.jpg)
 
+### Capabilities & Caveats
+This macro provides the following 3 key features;
+1. Initiate a call from any of the 4 Navigators (manual or OBTP) and the other 3 codecs dial the same address.
+2. Mute/unmute a call from any of the 4 Navigators and the other 3 codecs will mute/unmute.
+3. End call from any of the 4 Navigators and the other 3 codecs will end the call
+
+The following caveats exist
+1. When not in a call, sharing content only shows on the codec the cable is connected to (not the other 3).
+2. More investigation needs to be done on microphone/speaker experiences.
+
 ### Requirements
 The following items need to be performed to setup Campfire;
 1. A BOT Token needs to be created. This is used to notify the other codecs of the task to do
