@@ -16,7 +16,7 @@ The following caveats exist
 ### Requirements
 The following items need to be performed to setup Campfire;
 1. A BOT Token needs to be created. This is used to notify the other codecs of each of the tasks they need to do. If unfamiliar, the steps to creating a BOT [can be found here](https://developer.webex.com/messaging/docs/bots)
-2. Apply the BOT Token to all 4 of the Workspaces the Room Bar Pros are in. Ensure to set the permissions to Full Access
+2. Apply the BOT Token to all 4 of the Workspaces the Room Bar Pros are in. Ensure to set the permissions to Full Access. More on this [can be found here](https://developer.webex.com/devices/docs/devices#giving-a-bot-or-user-access-to-the-xapi-of-a-device)
 3. Obtain each of the device ID's for the 4 Room Bar Pros. This can be done via Control Hub or via the browser web GUI. For details [see the documentation](https://roomos.cisco.com/xapi/Status.Webex.DeveloperId/)
 
 Once these have been done, [the macro](https://github.com/dhenwood/Campfire/blob/main/Campfire.js) needs to be updated with the BOT Token and device ID's.
