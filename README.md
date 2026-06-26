@@ -3,7 +3,7 @@ In Campfire meeting rooms, in-person participants sit around a central arrangeme
 
 ![alt text](https://storage.googleapis.com/gblogs-bucket/sites/25/Campfire_close_up_4k_Still-1536x864.jpg)
 
-Cisco _had_ a solution to provide a Campfire experience however it is no longer available. The following is a simplified solution to the predecesor. **NOTE:** this is not Cisco or TAC supported.
+Cisco _had_ a solution to provide a Campfire experience however it is no longer available. The following is a simplified solution to the predecesor. This is made up of 4 Cisco Room Bar Pro devices and accompaning Navigator all operating independantly of each other - but the macro notifies the other 3 to perform specific tasks (see below). **NOTE:** this is not Cisco or TAC supported.
 
 ### Capabilities & Caveats
 This macro provides the following 3 key features;
