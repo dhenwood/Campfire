@@ -22,7 +22,7 @@ There are two ways in which the macro can perform;
 1. Direct messages between all four devices. This is preferable as the response time is almost immediate.
 2. Cloud messages, where all messages are sent via the Webex cloud. This would only be needed if each of your devices cannot communicate between them (firewall, etc)
 
-### Direct messages
+### Direct messages (option 1)
 The following steps are required:
 1. Get the IP Addresses of each of the 4 codecs
 2. Download the [direct messages](https://github.com/dhenwood/Campfire/blob/main/CampfireDirect.js) macro
@@ -30,7 +30,7 @@ The following steps are required:
 4. Replace each of the deviceIpCodec values with each of the IP addresses
 5. Deploy the macro on all 4 codecs and enable the macros.
 
-### Cloud messages
+### Cloud messages (option 2)
 The following items need to be performed to setup Campfire;
 1. A BOT Token needs to be created. This is used to notify the other codecs of each of the tasks they need to do. If unfamiliar, the steps to creating a BOT [can be found here](https://developer.webex.com/messaging/docs/bots)
 2. Apply the BOT Token to all 4 of the Workspaces the Room Bar Pros are in. Ensure to set the permissions to Full Access. More on this [can be found here](https://developer.webex.com/devices/docs/devices#giving-a-bot-or-user-access-to-the-xapi-of-a-device)
