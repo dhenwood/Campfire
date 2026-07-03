@@ -1,9 +1,11 @@
 ## Introduction
 In Campfire meeting rooms, in-person participants sit around a central arrangement of four quad-cameras and up to eight eye-level screens. Campfire accommodates up to 16 participants, with four on each side.
 
-![alt text](https://storage.googleapis.com/gblogs-bucket/sites/25/Campfire_close_up_4k_Still-1536x864.jpg)
+![alt text](https://www.employees.org/~dhenwood/WbxWallpaper/CampfirePhotoRealistic.png)
 
 Cisco _had_ a solution to provide a Campfire experience however it is no longer available. The following is a simplified solution to the predecesor. This is made up of 4 Cisco Room Bar Pro devices and accompaning Navigator all operating independantly of each other - but the macro notifies the other 3 to perform specific tasks (see below). **NOTE:** this is not Cisco or TAC supported.
+
+An interactive Workspace Designer view of this can be [found here](https://designer.webex.com/#/shared/aHR0cHM6Ly9jc2RtLWEud2J4Mi5jb20vY3NkbS9hcGkvdjEvZGVzaWduZXIvcm9vbXMvc2hhcmVMaW5rLzY4SDBQR2hZUmwwOXNXV3RUNm1UclE=)
 
 ### Capabilities & Caveats
 This macro provides the following 3 key features;
