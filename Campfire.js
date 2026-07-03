@@ -92,7 +92,7 @@ function init(){
     if (command == "placeCall"){
       let sipAddress = json.sipAddress
       let displayName = json.displayName
-      xapi.Command.Dial({ DisplayName: `Dialing ${displayName}`, Number: sipAddress });
+      xapi.Command.Dial({ DisplayName: displayName, Number: sipAddress });
     }else if (command == "muteCall"){
       let state = json.state
       if (state == "On"){
