@@ -1,4 +1,4 @@
-### Introduction
+## Introduction
 In Campfire meeting rooms, in-person participants sit around a central arrangement of four quad-cameras and up to eight eye-level screens. Campfire accommodates up to 16 participants, with four on each side.
 
 ![alt text](https://storage.googleapis.com/gblogs-bucket/sites/25/Campfire_close_up_4k_Still-1536x864.jpg)
@@ -15,10 +15,23 @@ The following caveats exist
 1. When not in a call, sharing content only shows on the codec the cable is connected to (not the other 3).
 2. More investigation needs to be done on microphone/speaker experiences.
 
-### Steps for setup
+## Steps for setup
+There are two ways in which the macro can perform;
+1. Direct messages between all four devices. This is preferable as the response time is almost immediate.
+2. Cloud messages, where all messages are sent via the Webex cloud. This would only be needed if each of your devices cannot communicate between them (firewall, etc)
+
+### Direct messages
+The following steps are required:
+1. Get the IP Addresses of each of the 4 codecs
+2. Download the [direct messages](https://github.com/dhenwood/Campfire/blob/main/CampfireDirect.js) macro
+3. Replace the username and password with the desired details. If this username does not exist, the macro will automatically create it.
+4. Replace each of the deviceIpCodec values with each of the IP addresses
+5. Deploy the macro on all 4 codecs and enable the macros.
+
+### Cloud messages
 The following items need to be performed to setup Campfire;
 1. A BOT Token needs to be created. This is used to notify the other codecs of each of the tasks they need to do. If unfamiliar, the steps to creating a BOT [can be found here](https://developer.webex.com/messaging/docs/bots)
 2. Apply the BOT Token to all 4 of the Workspaces the Room Bar Pros are in. Ensure to set the permissions to Full Access. More on this [can be found here](https://developer.webex.com/devices/docs/devices#giving-a-bot-or-user-access-to-the-xapi-of-a-device)
 3. Obtain each of the device ID's for the 4 Room Bar Pros. This can be done via Control Hub or via the browser web GUI. For details [see the documentation](https://roomos.cisco.com/xapi/Status.Webex.DeveloperId/)
-4. Once these have been done, [the macro](https://github.com/dhenwood/Campfire/blob/main/Campfire.js) needs to be updated with the BOT Token and 4 device ID's.
+4. Once these have been done, [the macro](https://github.com/dhenwood/Campfire/blob/main/CampfireCloud.js) needs to be updated with the BOT Token and 4 device ID's.
 5. Install the macro on each codec.
