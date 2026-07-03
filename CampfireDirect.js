@@ -46,7 +46,7 @@ async function createLocalAccount(){
   }
   catch(err) {
     console.log("User " + username + " does not exist. Creating local account")
-    xapi.Command.UserManagement.User.Add({ Username: username, Passphrase: password, Role: "User"});
+    xapi.Command.UserManagement.User.Add({ Username: username, Passphrase: password, Role: "Integrator"});
   }
 }
 
