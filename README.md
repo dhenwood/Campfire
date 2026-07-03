@@ -26,7 +26,7 @@ There are two ways in which the macro can perform;
 The following steps are required:
 1. Get the IP Addresses of each of the 4 codecs
 2. Download the [direct messages](https://github.com/dhenwood/Campfire/blob/main/CampfireDirect.js) macro
-3. Replace the username and password with the desired details. If this username does not exist, the macro will automatically create it.
+3. Replace the username and password with the desired details. If this username does not exist, the macro will automatically create it. If you are using an existing username, ensure the permissions role is "Integrator" or above.
 4. Replace each of the deviceIpCodec values with each of the IP addresses
 5. Deploy the macro on all 4 codecs and enable the macros.
 
